@@ -140,7 +140,7 @@ function startMinuteur() {
         selectedTime--;
         clock.innerHTML = formatMinuteur(selectedTime);
         if(selectedTime === 0) {
-            alert('FINITO PIPO');
+            alert('Minuterie fini..');
             stopMinuteur();
         }
     }, 1000);
