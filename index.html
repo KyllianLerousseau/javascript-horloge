@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Horloge</title>
+</head>
+<body>
+    <main class="app">
+
+        <div class="horloge-container" id="horloge-container">
+            <span id="clock" class="clock"></span>
+        </div>
+
+        <div id="mainMenu">
+            <button id="minuteur">Minuteur</button>
+            <button id="chrono">Chronomètre</button>
+            <button id="countdown">Compte à rebours</button>
+        </div>
+
+        <div id="chronoMenu" style="display: none;">
+            <button id="startChrono">Démarrer le chronomètre</button>
+            <button id="stopChrono">Arrêter le chronomètre</button>
+            <button id="resetChrono">Réinitialiser le chronomètre</button>
+            <button id="backChrono">Retour</button>
+        </div>
+
+        <div id="minuteurMenu" style="display: none;">
+            <div class="left-buttons">
+                <button id="addSeconds">Ajouter des secondes</button>
+                <button id="addMinutes">Ajouter des minutes</button>
+                <button id="addHours">Ajouter des heures</button>
+            </div>
+
+            <div class="right-buttons">
+                <button id="startMinuteur">Démarrer le minuteur</button>
+                <button id="stopMinuteur">Arrêter le minuteur</button>
+                <button id="resetMinuteur">Réinitialiser le minuteur</button>
+            </div>
+        </div>
+
+        <button id="backMinuteur" style="display: none;">Retour</button>
+
+        <div id="countdownMenu" style="display: none;">
+            <div id="timer-container">
+                <svg width="325" height="325" viewBox="0 0 200 200">
+                  <circle cx="100" cy="100" r="90" stroke="#e0e0e0" stroke-width="15" fill="none"/>
+                  <circle id="progressCircle" cx="100" cy="100" r="90" stroke="#76c7c0" stroke-width="15" fill="none"
+                    stroke-dasharray="565.48" stroke-dashoffset="565.48" stroke-linecap="round" transform="rotate(-90 100 100)"/>
+                </svg>
+                <div id="countdown-container"></div>
+              </div>
+
+            <input type="datetime-local" id="dateInput" class="custom-datetime">
+            <button id="startCountdown">Démarrer le compte à rebours</button>
+            <button id="stopCountdown">Arrêter le compte à rebours</button>
+            <button id="resetCountdown">Supprimer le compte à rebours</button>
+            <button id="backCountdown">Retour</button>
+        </div>
+    </main>
+</body>
+<script src="index.js"></script>
+</html>

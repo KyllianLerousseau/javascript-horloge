@@ -1,0 +1,174 @@
+#clock {
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 48px;
+    color: #00FFCC;  
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.8), 0 0 20px rgba(0, 255, 204, 0.6); 
+}
+
+h1 {
+    color: white;
+    font-size: 48px;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    height: 100vh;
+}
+
+button {
+    width: 400px;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #123524;  
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+}
+
+button:hover {
+    background-color: #1b4d33;
+}
+
+#chronoMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+#minuteurMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.left-buttons, .right-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#backMinuteur {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 600px;
+}
+
+.horloge-container {
+    padding: 50px;
+    border: 5px solid white;
+    border-radius: 50%; 
+    width: 300px;     
+    height: 300px;
+    background-color: rgba(19, 19, 19, 0.9);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 2%;
+}
+
+.horloge-container::before,
+.horloge-container::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #00FFCC;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+}
+
+.horloge-container::before {
+    top: 10px; left: 50%;
+    transform: translateX(-50%);
+}
+
+.horloge-container::after {
+    bottom: 10px; left: 50%;
+    transform: translateX(-50%);
+}
+
+#mainMenu, #countdownMenu {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+#timer-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 15px 25px;
+    font-size: 20px;
+  }
+  
+#countdown-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    color: white;
+}
+  
+circle {
+    transition: stroke-dashoffset 1s linear;
+}
+  
+.color-cycle {
+    animation: colorChange 5s infinite alternate;
+}
+  
+@keyframes colorChange {
+    0% { color: #ff4b4b; }
+    50% { color: #4b7bff; }
+    100% { color: #4bff78; }
+}
+
+.custom-datetime {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #76c7c0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .custom-datetime:hover {
+    border-color: #4b7bff;
+  }
+  
+  .custom-datetime:focus {
+    border-color: #4bff78;
+    box-shadow: 0 0 8px rgba(75, 255, 120, 0.5);
+  }
+  
+  .custom-datetime::-webkit-inner-spin-button,
+  .custom-datetime::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+
+  .custom-datetime::placeholder {
+    color: #aaa;
+  }
+  
+  
+body {
+    background-image: radial-gradient(circle farthest-corner at 96.1% 7.2%, rgba(9,178,62,1) 0%, rgba(19,19,19,1) 100.2%);
+}
